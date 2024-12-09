@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Schedule</title>
+</head>
+<body>
+<h2>Schedule</h2>
+<a href="/login">Log out</a>
+<h3>Your Schedule</h3>
+<table>
+  <thead>
+  <tr>
+    <th>Day</th>
+    <th>Time</th>
+    <th>Activity</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="scheduleItem : ${schedule}">
+    <td th:text="${scheduleItem.day}"></td>
+    <td th:text="${scheduleItem.time}"></td>
+    <td th:text="${scheduleItem.activity}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
